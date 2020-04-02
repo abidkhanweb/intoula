@@ -1,24 +1,38 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from './data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
-
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { Item } from './item';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent implements OnInit {
   title = 'intoula';
   /*visibleSidebar1 = true;
   items: MenuItem[];*/
+  appointmentData:Item[];
+  constructor(private dataService:DataService){
+      /*const things = db.collection('owner').doc('Drivers').collection('Driver').valueChanges();
+      things.subscribe(a=> {
+        console.log(this.data = a)
+      });*/
 
-
-  constructor(private db:AngularFirestore){
-    const things = db.collection('test').valueChanges();
-      things.subscribe(console.log);
   }
 
+  
+
+
+  ngOnInit(){
+    
+    this.dataService.getAllData().subscribe((response:any)=>{
+      this.appointmentData = response;
+    })
+  }
     /*visibleSidebar2 = true;
 
     visibleSidebar3 = true;
@@ -27,9 +41,7 @@ export class AppComponent implements OnInit {
 
     visibleSidebar5 = true;*/
 
-    ngOnInit(){
-
-    }
+    
 
   
 

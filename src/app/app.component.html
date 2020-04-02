@@ -514,6 +514,7 @@
 
 
 
+
 <!-- 
 <p-accordion>
   <p-accordionTab header="Godfather I" [selected]="true">
@@ -573,6 +574,37 @@
         <div class="row d-flex justify-content-between">
           <div class="col-md-6 d-inline-flex"><h1>Dashboard</h1></div>
           <div class="col-md-6 d-inline-flex text-right d-flex justify-content-end"><img src="assets/images/logo.png" height="50"></div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Contact Number</th>
+                  <th>Email</th>
+                  <th>Address</th>
+                  <th>Age</th>
+                  <th>Joining Date</th>
+                  <th>Vehicle Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let data of appointment">
+                  <td>{{data.firstName}}</td>
+                  <td>{{data.lastName}}</td>
+                  <td>{{data.contactNumber}}</td>
+                  <td>{{data.email}}</td>
+                  <td>{{data.address}}</td>
+                  <td>{{data.age}}</td>
+                  <td>{{data.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td>
+                  <td>{{data.vehicleNumber}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
 
     </div>
