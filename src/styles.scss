@@ -1,0 +1,4 @@
+/* You can add global styles to this file, and also import other style files */
+.sidebar{ color:#ffffff; position: relative;}
+.sidebar:before { z-index: 0; background-color: #232323; content: ""; width:16.6666666667%; height:100%; position: fixed; left:0; top:0;}
+.sidebar p { color:#ffffff;}
