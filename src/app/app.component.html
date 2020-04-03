@@ -578,6 +578,8 @@
 
         <div class="row">
           <div class="col-md-12">
+
+
             <table class="table">
               <thead>
                 <tr>
@@ -592,7 +594,7 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let data of appointment">
+                <!-- <tr *ngFor="let data of appointment">
                   <td>{{data.firstName}}</td>
                   <td>{{data.lastName}}</td>
                   <td>{{data.contactNumber}}</td>
@@ -602,14 +604,19 @@
                   <td>{{data.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td>
                   <td>{{data.vehicleNumber}}</td>
                 </tr>
-              </tbody>
+              </tbody> -->
             </table>
+
+
+            <app-create-driver></app-create-driver>
           </div>
         </div>
 
     </div>
   </div>
 </div>
+
+
 
 <!-- <p-sidebar [(visible)]="visibleSidebar2" position="right" [baseZIndex]="10000">
   <h1 style="font-weight:normal">Right Sidebar</h1>
