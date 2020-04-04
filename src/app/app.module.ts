@@ -23,6 +23,9 @@ import { AppComponent } from './app.component';
 import { CreateDriverComponent } from './create-driver/create-driver.component';
 import { ViewsModule } from './views/views.module';
 import { ViewComponent } from './views/view.component';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 
@@ -32,6 +35,9 @@ import { ViewComponent } from './views/view.component';
     AppComponent,
     CreateDriverComponent,
     ViewComponent,
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
