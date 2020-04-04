@@ -21,6 +21,8 @@ import {SlideMenuModule} from 'primeng/slidemenu';*/
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CreateDriverComponent } from './create-driver/create-driver.component';
+import { ViewsModule } from './views/views.module';
+import { ViewComponent } from './views/view.component';
 
 
 
@@ -29,18 +31,19 @@ import { CreateDriverComponent } from './create-driver/create-driver.component';
   declarations: [
     AppComponent,
     CreateDriverComponent,
+    ViewComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
+    ViewsModule,
     PrimecomponentsModule,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule // storage
+    AngularFireStorageModule, ViewsModule // storage
     /*SidebarModule,
     AccordionModule,
     CarouselModule,
