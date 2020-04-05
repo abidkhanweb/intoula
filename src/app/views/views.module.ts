@@ -10,12 +10,10 @@ import { DashboardComponent } from './owner/dashboard/dashboard.component';
 const allComponents = [CreateComponent, ViewComponent, ListComponent,DashboardComponent]
 
 @NgModule({
-  declarations: [allComponents],
+  declarations: allComponents,
   imports: [
     CommonModule
   ],
-  exports:[
-    allComponents
-  ]
+  exports:allComponents
 })
 export class ViewsModule { }

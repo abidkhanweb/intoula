@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { OwnDriverService } from '../shared.service';
+import { Item } from '../model/item';
+
+
 
 @Component({
   selector: 'app-list',
@@ -7,9 +11,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  allDrivers:Item[];
+
+  constructor(private driverService:OwnDriverService) { }
 
   ngOnInit(): void {
+    this.driverService.getAllDriver().subscribe(res=>{
+      this.allDrivers = res;
+      console.log(res);
+    })
+
+    this.driverService.setData();
   }
 
 }

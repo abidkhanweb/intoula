@@ -31,7 +31,7 @@ export class DataService implements OnInit {
         });
       })
     );
-    this.appointmentFirestore;
+    return this.appointmentFirestore;
   }
 
   
