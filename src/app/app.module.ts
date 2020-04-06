@@ -29,6 +29,7 @@ import { environment } from '../environments/environment';
 
 
 
+/* Firebase configuration */
 
 
 @NgModule({
@@ -39,23 +40,21 @@ import { environment } from '../environments/environment';
     FooterComponent,
     HeaderComponent,
     SidebarComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    
     ViewsModule,
     PrimecomponentsModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule, ViewsModule // storage
-    /*SidebarModule,
-    AccordionModule,
-    CarouselModule,
-    SlideMenuModule,
-    ButtonModule*/
+    AngularFireStorageModule, // storage
     
   ],
   providers: [OwnDriverService,DataService],
