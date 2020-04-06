@@ -512,9 +512,6 @@
 
 </div>
 
-
-
-
 <!-- 
 <p-accordion>
   <p-accordionTab header="Godfather I" [selected]="true">
@@ -542,7 +539,7 @@
   <button pButton type="button" (click)="visibleSidebar1 = false" label="Cancel" class="ui-button-secondary"></button>
 </p-sidebar> -->
 
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row">
     <div class="col-md-2 sidebar  p-3">
         <div class="row">
@@ -612,7 +609,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 
 
@@ -645,6 +642,40 @@
 <button pButton type="button" (click)="visibleSidebar3 = true" icon="pi pi-arrow-down"></button>
 <button pButton type="button" (click)="visibleSidebar4 = true" icon="pi pi-arrow-up"></button>
 <button pButton type="button" (click)="visibleSidebar5 = true" icon="pi pi-th-large"></button> -->
+
+<div class="container-fluid">
+  <div class="p-grid">
+    <div class="p-col p-md-12 p-lg-12">
+      <app-header></app-header>
+    </div>
+  </div>
+  <div class="p-grid">
+    <div class="p-col p-md-2 p-lg-2">
+      <app-sidebar></app-sidebar>
+    </div>
+    <div class="p-col p-md-10 p-lg-10">
+        <app-view></app-view>
+    </div>
+  </div>
+  <app-footer></app-footer>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <router-outlet></router-outlet>

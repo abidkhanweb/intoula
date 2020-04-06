@@ -5,26 +5,17 @@ import { SidebarModule } from 'primeng/sidebar';
 import {ButtonModule} from 'primeng/button';
 import {CarouselModule} from 'primeng/carousel';
 import {SlideMenuModule} from 'primeng/slidemenu';
+import {PanelMenuModule} from 'primeng/panelmenu';
+import {BreadcrumbModule} from 'primeng/breadcrumb';
+
+
+const allModules = [CommonModule, SidebarModule, AccordionModule, CarouselModule, SlideMenuModule, ButtonModule, PanelMenuModule,BreadcrumbModule]
 
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    SidebarModule,
-    AccordionModule,
-    CarouselModule,
-    SlideMenuModule,
-    ButtonModule
-  ],
-  exports:[
-    CommonModule,
-    SidebarModule,
-    AccordionModule,
-    CarouselModule,
-    SlideMenuModule,
-    ButtonModule
-  ]
+  imports: [allModules],
+  exports: [allModules]
   
 })
 export class PrimecomponentsModule { }
