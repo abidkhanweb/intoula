@@ -2,3 +2,8 @@
 .sidebar{ color:#ffffff; position: relative;}
 .sidebar:before { z-index: 0; background-color: #232323; content: ""; width:16.6666666667%; height:100%; position: fixed; left:0; top:0;}
 .sidebar p { color:#ffffff;}
+
+html, body{min-height: 100%; height:100%;}
+.height-full {height: 100%;}
+
+.sidebar-menu { background-color:#232323;}

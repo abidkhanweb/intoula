@@ -643,21 +643,17 @@
 <button pButton type="button" (click)="visibleSidebar4 = true" icon="pi pi-arrow-up"></button>
 <button pButton type="button" (click)="visibleSidebar5 = true" icon="pi pi-th-large"></button> -->
 
-<div class="container-fluid">
-  <div class="p-grid">
-    <div class="p-col p-md-12 p-lg-12">
-      <app-header></app-header>
-    </div>
-  </div>
-  <div class="p-grid">
-    <div class="p-col p-md-2 p-lg-2">
+<div class="container-fluid height-full">
+  <div class="p-grid height-full">
+    <div class="p-col p-md-2 p-lg-2 height-full  sidebar-menu">
       <app-sidebar></app-sidebar>
     </div>
-    <div class="p-col p-md-10 p-lg-10">
+    <div class="p-col p-md-10 p-lg-10 height-full">
+        <app-header></app-header>
         <app-view></app-view>
+        <app-footer></app-footer>
     </div>
   </div>
-  <app-footer></app-footer>
 </div>
 
 
