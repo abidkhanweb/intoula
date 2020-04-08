@@ -1,14 +1,14 @@
-<div class="p-grid">
-    <div class="p-col p-md-8 p-lg-8">
+
+<div class="row top-header">
+    <div class="col d-flex align-items-center">
         <div class="hamburger-menu">
-            <span>☰</span>
+            <a href=""><span>☰</span></a>
         </div>
-        <h1>Dashboard</h1>
+        <p-breadcrumb [model]="items" [home]="home"></p-breadcrumb>
     </div>
-    <div class="p-col p-md-4 p-lg-4">
-        <div class="company-logo">
+    <div class="ml-auto d-flex align-items-center col-padd">
+        <div class="brand-logo">
             <span><img src="assets/images/logo.png"></span>
         </div>
     </div>
-     
 </div>

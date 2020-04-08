@@ -1,17 +1,20 @@
-<div class="p-grid">
-    <div class="p-col p-md-6 p-lg-6">
-        <div class="user">
-            <span>Welcome!</span>
-            <span class="user-name">Khalid Khan</span>
+<div class="row">
+    <div class="col col-md-12 user">
+        <div class="row d-flex">
+            <div class="col">
+                <span>Welcome!</span>
+                <span class="username">Khalid Khan</span>
+            </div>
+            <div class="ml-auto col-padd">
+                <div class="pro-pic">
+                    <span><img src="assets/images/owner.jpg"></span>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="p-col p-md-6 p-lg-6">
-        <div class="pro-pic">
-            <span><img src="assets/images/owner.jpg"></span>
-        </div>
-    </div>
-    <div class="p-col p-md-12 p-lg-12">
+    
+    <div class="col col-md-12 accord-menu-panel">
         <p-panelMenu [model]="items" [style]="{'width':'100%'}"></p-panelMenu>
-     </div>
+    </div>
 </div>
 
