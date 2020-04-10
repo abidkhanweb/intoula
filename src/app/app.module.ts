@@ -61,3 +61,17 @@ import { environment } from '../environments/environment';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+/* OwnerDashboardComponent
+OwnerCreateDriverComponent
+OwnerDriverComponent
+OwnerDriverViewComponent
+OwnerNotificationComponent
+OwnerReportComponent
+
+
+DriverDashboardComponent
+DriverViewComponent
+DriverCreateReportComponent
+DriverViewReportComponent*/

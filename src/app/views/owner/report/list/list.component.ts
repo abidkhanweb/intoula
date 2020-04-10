@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ReportListComponent implements OnInit {
+export class OwnerReportComponent implements OnInit {jq
 
   constructor() { }
 

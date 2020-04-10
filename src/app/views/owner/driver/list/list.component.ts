@@ -9,7 +9,7 @@ import { Item } from '../model/item';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent implements OnInit {
+export class OwnerDriverComponent implements OnInit {
 
   allDrivers:Item[];
 
