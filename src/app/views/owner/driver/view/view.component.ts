@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.scss']
 })
-export class DViewComponent implements OnInit {
+export class DriverViewComponent implements OnInit {
 
   constructor() { }
 

@@ -16,17 +16,15 @@ export class SidebarComponent implements OnInit {
         this.items = [
             
             
-          {label: 'Dashboard'},
-          {
-            label: 'Driver',
-            "routerLink": "['fin/ar/dbm/customer/master']",
+          {label: 'Dashboard', "routerLink": "/",},
+          {label: 'Driver', "routerLink": "/driver",
             // icon: 'pi pi-fw pi-pencil',
             items: [
-                {label: 'Create', /*icon: 'pi pi-fw pi-save'*/},
-                {label: 'List', /*icon: 'pi pi-fw pi-save'*/},
+                {label: 'Create', "routerLink": "/create-driver",/*icon: 'pi pi-fw pi-save'*/},
+                {label: 'List', "routerLink": "/driver",/*icon: 'pi pi-fw pi-save'*/},
             ]
           },
-          { label: 'Report'},
+          { label: 'Report',"routerLink": "/report",},
           
       ]
             
