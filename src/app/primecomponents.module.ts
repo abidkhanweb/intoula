@@ -8,13 +8,15 @@ import { SlideMenuModule } from 'primeng/slidemenu';
 import { PanelMenuModule } from 'primeng/panelmenu';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { CardModule } from 'primeng/card';
+import {InputTextModule} from 'primeng/inputtext';
+import {InputTextareaModule} from 'primeng/inputtextarea';
 
 
 
 
 
 
-const allModules = [CommonModule, SidebarModule, AccordionModule, CarouselModule, SlideMenuModule, ButtonModule, PanelMenuModule,BreadcrumbModule,CardModule];
+const allModules = [CommonModule, SidebarModule, AccordionModule, CarouselModule, SlideMenuModule, ButtonModule, PanelMenuModule,BreadcrumbModule,CardModule,InputTextModule,InputTextareaModule];
 
 
 @NgModule({
