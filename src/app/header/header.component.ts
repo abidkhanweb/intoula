@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
             {label:'Lionel Messi', url: 'https://en.wikipedia.org/wiki/Lionel_Messi', icon: 'pi pi-external-link'}
         ];
         
-        this.home = {icon: 'pi pi-home'};
+        this.home = {icon: 'pi pi-home', "routerLink":"/", routerLinkActiveOptions:'active-linksssss'};
     }
     
 

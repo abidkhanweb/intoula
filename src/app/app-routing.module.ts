@@ -1,19 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ViewsModule } from './views/views.module';
-import { DashboardComponent } from './views/owner/dashboard/dashboard.component';
-import { ListComponent } from './views/owner/driver/list/list.component';
-import { ReportListComponent } from './views/owner/report/list/list.component';
-import { CreateComponent } from './views/owner/driver/create/create.component';
-import { DriverViewComponent } from './views/owner/driver/view/view.component';
+import { OwnerDashboardComponent } from './views/owner/dashboard/dashboard.component';
+import { OwnerDriverComponent } from './views/owner/driver/list/list.component';
+import { OwnerReportComponent } from './views/owner/report/list/list.component';
+import { OwnerCreateDriverComponent } from './views/owner/driver/create/create.component';
+import { OwnerDriverViewComponent } from './views/owner/driver/view/view.component';
 
 
 const routes: Routes = [
-  {  path:'', component:DashboardComponent, pathMatch:'full'},
-  {  path:'create-driver', component:CreateComponent},
-  {  path:'driver', component:ListComponent},
-  {  path:'report', component:ReportListComponent},
-  {  path:'view', component:DriverViewComponent}
+  { path:'', component:OwnerDashboardComponent, pathMatch:'full'},
+  { path:'create-driver', component:OwnerCreateDriverComponent},
+  { path:'driver', component:OwnerDriverComponent},
+  { path:'view', component:OwnerDriverViewComponent},
+  { path:'report', component:OwnerReportComponent},
+  
 ];
 
 @NgModule({
