@@ -17,7 +17,7 @@ export class SidebarComponent implements OnInit {
             
             
           {label: 'Dashboard', "routerLink": "/",},
-          {label: 'Driver', "routerLink": "/driver",
+          {label: 'Driver', 
             // icon: 'pi pi-fw pi-pencil',
             items: [
                 {label: 'Create', "routerLink": "/create-driver",/*icon: 'pi pi-fw pi-save'*/},

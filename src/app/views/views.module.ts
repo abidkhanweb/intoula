@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { OwnerCreateDriverComponent } from './owner/driver/create/create.component';
 import { OwnerDriverComponent } from './owner/driver/list/list.component';
@@ -14,7 +15,9 @@ const allComponents = [OwnerCreateDriverComponent, OwnerDriverComponent,OwnerDas
   declarations: [allComponents],
   imports: [
     CommonModule,
-    PrimecomponentsModule
+    PrimecomponentsModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports:allComponents
 })

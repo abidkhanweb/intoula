@@ -10,13 +10,14 @@ import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { CardModule } from 'primeng/card';
 import {InputTextModule} from 'primeng/inputtext';
 import {InputTextareaModule} from 'primeng/inputtextarea';
+import {CalendarModule} from 'primeng/calendar';
 
 
 
 
 
 
-const allModules = [CommonModule, SidebarModule, AccordionModule, CarouselModule, SlideMenuModule, ButtonModule, PanelMenuModule,BreadcrumbModule,CardModule,InputTextModule,InputTextareaModule];
+const allModules = [CommonModule, SidebarModule, AccordionModule, CarouselModule, SlideMenuModule, ButtonModule, PanelMenuModule,BreadcrumbModule,CardModule,InputTextModule,InputTextareaModule,CalendarModule];
 
 
 @NgModule({
