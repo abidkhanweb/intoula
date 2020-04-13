@@ -14,8 +14,6 @@ export class OwnDriverService implements OnInit {
   driver:Observable<Item[]>;
   driverCollect:any;
 
-
-  
   constructor(private http:HttpClient, private db:AngularFirestore){
     this.driverCollect = db.collection("owner").doc("Drivers").collection("Driver");
   }
@@ -42,19 +40,36 @@ export class OwnDriverService implements OnInit {
     return this.driver;
   }
 
+  createDoc(data){
+    this.driverCollect.add({
+      media:data.media,
+      firstName:data.lastName,
+      lastName:data.lastName,
+      contactNumber:data.contactNumber,
+      email:data.email,
+      address:data.address,
+      age:data.age,
+      joiningDate:data.joiningDate,
+      fuelType:data.fuelType,
+      vehicleNumber:data.vehicleNumber,
+      vehicleModel:data.vehicleModel
+    })
+  }
+
   setData(){
-    this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
-    docId:'452',
+    /*this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
+    media:'',
     firstName:'Gulam',
     lastName:'Jilani',
     contactNumber:'8652458547',
     email:'gulamjilaniset@gmail.com',
     address:'Malad',
     age:'28',
+    fuelType:'CNG',
     joiningDate:'15-03-2020',
     vehicleNumber:'MH 04 - 5263',
     vehicleModel:'Honda City - Ivtec'
-    })
+    })*/
   }
 
   ngOnInit(){

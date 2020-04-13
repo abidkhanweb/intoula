@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { OwnDriverService } from '../shared.service';
 
 @Component({
   selector: 'app-create',
@@ -9,6 +10,8 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class OwnerCreateDriverComponent implements OnInit {
   
   value: Date;
+
+  constructor(private driveService:OwnDriverService) { }
 
   driverForm:any = new FormGroup({
     firstName:new FormControl(),
@@ -21,13 +24,13 @@ export class OwnerCreateDriverComponent implements OnInit {
     vehicleNumber:new FormControl()
   })
 
-  constructor() { }
+  
 
   ngOnInit(): void {
   }
 
   submitForm(){
-    console.log(this.driverForm.value);
+    this.driveService.createDoc(this.driverForm.value);
   }
 
 }
