@@ -14,6 +14,7 @@ export class OwnerCreateDriverComponent implements OnInit {
   constructor(private driveService:OwnDriverService) { }
 
   driverForm:any = new FormGroup({
+    media:new FormControl(),
     firstName:new FormControl(),
     lastName:new FormControl(),
     email:new FormControl(),
@@ -21,6 +22,8 @@ export class OwnerCreateDriverComponent implements OnInit {
     age:new FormControl(),
     address:new FormControl(),
     joiningDate:new FormControl(),
+    fuelType:new FormControl(),
+    vehicleModel:new FormControl(),
     vehicleNumber:new FormControl()
   })
 

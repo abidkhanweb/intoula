@@ -57,7 +57,7 @@ export class OwnDriverService implements OnInit {
   }
 
   setData(){
-    /*this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
+    this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
     media:'',
     firstName:'Gulam',
     lastName:'Jilani',
@@ -69,7 +69,7 @@ export class OwnDriverService implements OnInit {
     joiningDate:'15-03-2020',
     vehicleNumber:'MH 04 - 5263',
     vehicleModel:'Honda City - Ivtec'
-    })*/
+    })
   }
 
   ngOnInit(){

@@ -14,7 +14,7 @@
                         <div class="form-group">
                             <div class="ui-inputgroup">
                                 <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-                                <input class="form-control" type="text" pInputText placeholder="First name" formControlName="firstName" name="firstName" ngModel>         
+                                <input class="form-control" type="text" pInputText placeholder="First name" formControlName="firstName" name="firstName" required ngModel>         
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         <div class="form-group">
                             <div class="ui-inputgroup">
                                 <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
-                                <p-calendar [(ngModel)]="value" formControlName="joiningDate" name="joiningDate" placeholder="Date of joining" ngModel></p-calendar>
+                                <p-calendar [(ngModel)]="value" formControlName="joiningDate" name="joiningDate" placeholder="Date of joining"></p-calendar>
                             </div>
                         </div>
                     </div>
@@ -62,7 +62,7 @@
                         <div class="form-group">
                             <div class="ui-inputgroup">
                                 <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-                                <input class="form-control" type="text" pInputText placeholder="Age" formControlName="vehicleNumber" name="vehicleNumber" ngModel>
+                                <input class="form-control" type="text" pInputText placeholder="Vehicle Number" formControlName="vehicleNumber" name="vehicleNumber" ngModel>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                         <div class="form-group">
                             <div class="ui-inputgroup">
                                 <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-                                <input class="form-control" type="text" pInputText placeholder="Age" formControlName="vehicleModel" name="vehicleModel" ngModel>
+                                <input class="form-control" type="text" pInputText placeholder="Vehicle model" formControlName="vehicleModel" name="vehicleModel" ngModel>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                     </div>
                     <div class="col-12 col-md-12">
                         <div class="form-group text-right">
-                            <button pButton type="button" label="Submit" (click)="submitForm()"></button>
+                            <button pButton type="button" label="Submit" (click)="submitForm()" [disabled]="!driverForm.valid"></button>
                         </div>
                     </div>
                 </div>
