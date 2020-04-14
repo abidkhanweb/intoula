@@ -24,4 +24,8 @@ export class OwnerDriverComponent implements OnInit {
     this.driverService.setData();
   }
 
+  deleteDriver(id){
+    this.driverService.deleteDoc(id);
+  }
+
 }

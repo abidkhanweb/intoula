@@ -56,6 +56,10 @@ export class OwnDriverService implements OnInit {
     })
   }
 
+  deleteDoc(id){
+    this.driverCollect.doc(id).delete();
+  }
+
   setData(){
     this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
     media:'',
