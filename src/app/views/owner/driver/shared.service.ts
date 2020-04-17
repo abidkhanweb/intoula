@@ -60,7 +60,22 @@ export class OwnDriverService implements OnInit {
     this.driverCollect.doc(id).delete();
   }
 
-  
+  setData(){
+    this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
+    media:'',
+    firstName:'Gulam',
+    lastName:'Jilani',
+    contactNumber:'8652458547',
+    email:'gulamjilaniset@gmail.com',
+    address:'Malad',
+    age:'28',
+    fuelType:'CNG',
+    joiningDate:'15-03-2020',
+    vehicleNumber:'MH 04 - 5263',
+    vehicleModel:'Honda City - Ivtec'
+    })
+  }
+
 
   ngOnInit(){
   
