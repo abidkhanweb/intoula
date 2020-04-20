@@ -24,6 +24,10 @@ export class OwnerDriverComponent implements OnInit {
     this.driverService.setData();
   }
 
+  getDocId(id){
+      console.log(id);
+  }
+
   deleteDriver(id){
     this.driverService.deleteDoc(id);
   }
