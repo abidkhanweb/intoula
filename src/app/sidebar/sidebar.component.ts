@@ -10,21 +10,35 @@ export class SidebarComponent implements OnInit {
 
   constructor() { }
 
-  items: MenuItem[];
+  ownerMenu: MenuItem[];
+  driverMenu: MenuItem[];
 
     ngOnInit():void {
-        this.items = [
+      this.ownerMenu = [
             
             
-          {label: 'Dashboard', "routerLink": "/",},
-          {label: 'Driver', 
+          { label: 'Dashboard', "routerLink": "/",},
+          { label: 'Driver', 
             // icon: 'pi pi-fw pi-pencil',
             items: [
-                {label: 'Create', "routerLink": "/create-driver",/*icon: 'pi pi-fw pi-save'*/},
-                {label: 'List', "routerLink": "/driver",/*icon: 'pi pi-fw pi-save'*/},
+                { label: 'Create', "routerLink": "/create-driver",/*icon: 'pi pi-fw pi-save'*/},
+                { label: 'List', "routerLink": "/driver",/*icon: 'pi pi-fw pi-save'*/},
             ]
           },
           { label: 'Report',"routerLink": "/report",},
+          
+      ];
+
+      this.driverMenu = [
+            
+          { label: 'Dashboard', "routerLink": "/driver-dashboard",},
+          { label: 'Report', 
+            items: [
+                { label: 'Create', "routerLink": "/driver-create-report",},
+                { label: 'List', "routerLink": "/driver-view-report",},
+            ]
+          },
+          { label: 'My Profile',"routerLink": "/driver-view",},
           
       ]
             
