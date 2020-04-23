@@ -23,7 +23,7 @@ export class OwnerCreateDriverComponent implements OnInit {
   
   value: Date;
 
-  constructor(private driveService:OwnDriverService,@Inject(AngularFireStorage) private storage: AngularFireStorage, @Inject(OwnDriverService) private fileService: OwnDriverService) { }
+  constructor(private OwnDriveService:OwnDriverService,@Inject(AngularFireStorage) private storage: AngularFireStorage, @Inject(OwnDriverService) private fileService: OwnDriverService) { }
 
   driverForm:any = new FormGroup({
     media:new FormControl(),
@@ -83,7 +83,7 @@ export class OwnerCreateDriverComponent implements OnInit {
 
 
   submitForm(){
-    this.driveService.createDoc(this.driverForm.value);
+    this.OwnDriveService.createDoc(this.driverForm.value);
   }
 
 }

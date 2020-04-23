@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { OwnDriverService } from '../shared.service';
 import { Item } from '../model/item';
 
@@ -13,15 +14,40 @@ export class OwnerDriverComponent implements OnInit {
 
   allDrivers:Item[];
 
-  constructor(private driverService:OwnDriverService) { }
+  editForm:any = new FormGroup({
+    media:new FormControl(),
+    firstName:new FormControl(),
+    lastName:new FormControl(),
+    email:new FormControl(),
+    contactNumber:new FormControl(),
+    age:new FormControl(),
+    address:new FormControl(),
+    joiningDate:new FormControl(),
+    fuelType:new FormControl(),
+    vehicleModel:new FormControl(),
+    vehicleNumber:new FormControl()
+  })
+
+
+  displayModal: boolean;
+
+ 
+
+  position: string;
+
+  showModalDialog() {
+      this.displayModal = true;
+  }
+
+  constructor(private OwnDriverService:OwnDriverService) { }
 
   ngOnInit(): void {
-    this.driverService.getAllDriver().subscribe(res=>{
+    this.OwnDriverService.getAllDriver().subscribe(res=>{
       this.allDrivers = res;
       console.log(res);
     })
 
-    this.driverService.setData();
+    this.OwnDriverService.setData();
   }
 
   getDocId(id){
@@ -29,7 +55,11 @@ export class OwnerDriverComponent implements OnInit {
   }
 
   deleteDriver(id){
-    this.driverService.deleteDoc(id);
+    this.OwnDriverService.deleteDoc(id);
+  }
+
+  submitForm(){
+    this.OwnDriverService.createDoc(this.editForm.value);
   }
 
 }

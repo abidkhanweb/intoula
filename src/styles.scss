@@ -1,5 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 $colPadd:15px;
+$zero:0px;
+$grey:#cccccc;
 
 
 
@@ -15,7 +17,8 @@ body h1 { font-size:2em; font-weight: 400;}
 .sidebar-menu .user .pro-pic img { border-radius: 50%; overflow: hidden; background-color: #4a4a4a; padding: 3px;}
 .sidebar-menu .accord-menu-panel { margin-top:30px;}
 
-
+.buttons button { display: inline-block; margin:0 5px 0 0;}
+.buttons button:last-child { margin-right:$zero;}
 
 body .top-header .ui-breadcrumb { background-color: transparent; border:0;}
 .top-header { background-color: #eeeeee; min-height:66px}
@@ -23,7 +26,7 @@ body .top-header .ui-breadcrumb { background-color: transparent; border:0;}
 
 .page-header {     padding: 15px 0;     border-bottom: 1px solid #eeeeee; margin-bottom: 20px;}
 
-app-footer { position: fixed; bottom: 20px;}
+app-footer { position: fixed; bottom: 20px; color:$grey;}
 
 
 /* Common */
