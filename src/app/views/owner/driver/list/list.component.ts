@@ -12,6 +12,8 @@ import { Item } from '../model/item';
 })
 export class OwnerDriverComponent implements OnInit {
 
+  value: Date;
+
   allDrivers:Item[];
 
   editForm:any = new FormGroup({
@@ -33,7 +35,7 @@ export class OwnerDriverComponent implements OnInit {
 
  
 
-  position: string;
+  //position: string;
 
   showModalDialog() {
       this.displayModal = true;
