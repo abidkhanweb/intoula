@@ -14,6 +14,7 @@
             <table class="table">
                 <thead>
                   <tr>
+                    <th>Doc ID</th>
                     <th>Media</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -21,16 +22,17 @@
                     <th>Email</th>
                     <th>Address</th>
                     <th>Age</th>
-                    <th>Joining Date</th>
                     <th>Fuel Type</th>
+                    <th>Joining Date</th>
                     <th>Vehicle Number</th>
-                    <th>Vehicle Number</th>
+                    <th>Vehicle Model</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   
                     <tr *ngFor="let driver of allDrivers">
+                        <td>{{driver.docId}}</td>
                         <td><img [src]="driver.media" width="60"></td>
                         <td>{{driver.firstName}}</td>
                         <td>{{driver.lastName}}</td>
@@ -38,16 +40,18 @@
                         <td>{{driver.email}}</td>
                         <td>{{driver.address}}</td>
                         <td>{{driver.age}}</td>
-                        <td>{{driver.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td>
                         <td>{{driver.fuelType}}</td>
+                        <td>{{driver.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td>
                         <td>{{driver.vehicleNumber}}</td>
                         <td>{{driver.vehicleModel}}</td>
                         <td class="buttons">
-                            <button class="btn btn-primary" (click)="getDocId(driver.docId);showModalDialog()">Edit</button>
+                            <button class="btn btn-primary" (click)="showModalDialog()">Edit</button>
                             <button class="btn btn-danger" (click)="deleteDriver(driver.docId)">Delete</button>
                         </td>
                     </tr>
 
+
+                    
                   
 
                 </tbody>
@@ -56,7 +60,8 @@
     </div>
     
 </div>
-
+driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,driver.address,
+          driver.age,driver.joiningDate,driver.fuelType,driver.vehicleNumber,driver.vehicleModel
 <h3>Modal</h3>
 <button type="button" (click)="showModalDialog()" pButton icon="pi pi-external-link" label="Show"></button>
 <p-dialog header="Godfather I" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
@@ -65,6 +70,12 @@
 
         <div class="row">
             <div class="col-12 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="form-control" type="text" pInputText placeholder="First name" formControlName="docId" name="docId" required ngModel>         
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="ui-inputgroup">
                         <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>

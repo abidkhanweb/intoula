@@ -109,8 +109,8 @@ export class OwnDriverService implements OnInit {
       email:data.email,
       address:data.address,
       age:data.age,
-      joiningDate:data.joiningDate,
       fuelType:data.fuelType,
+      joiningDate:data.joiningDate,
       vehicleNumber:data.vehicleNumber,
       vehicleModel:data.vehicleModel
     })

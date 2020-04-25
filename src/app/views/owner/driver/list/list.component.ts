@@ -17,6 +17,7 @@ export class OwnerDriverComponent implements OnInit {
   allDrivers:Item[];
 
   editForm:any = new FormGroup({
+    docId:new FormControl(),
     media:new FormControl(),
     firstName:new FormControl(),
     lastName:new FormControl(),
@@ -28,7 +29,25 @@ export class OwnerDriverComponent implements OnInit {
     fuelType:new FormControl(),
     vehicleModel:new FormControl(),
     vehicleNumber:new FormControl()
-  })
+  });
+
+
+  getDocId(id,media,firstName,lastName,contactNumber,email,address,age,fuelType,joiningDate,vehicleNumber,vehicleModel){
+    this.editForm.setValue({
+      docId: id,
+      media: media,
+      firstName:firstName,
+      lastName:lastName,
+      contactNumber:contactNumber,
+      email: email,
+      address:address,
+      age:age,
+      fuelType:fuelType,
+      joiningDate:joiningDate, 
+      vehicleNumber:vehicleNumber,
+      vehicleModel:vehicleModel,
+    });
+  }
 
 
   displayModal: boolean;
@@ -52,9 +71,7 @@ export class OwnerDriverComponent implements OnInit {
     this.OwnDriverService.setData();
   }
 
-  getDocId(id){
-      console.log(id);
-  }
+  
 
   deleteDriver(id){
     this.OwnDriverService.deleteDoc(id);
