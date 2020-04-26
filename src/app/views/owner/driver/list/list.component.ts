@@ -68,7 +68,7 @@ export class OwnerDriverComponent implements OnInit {
       console.log(res);
     })
 
-    this.OwnDriverService.setData();
+    //this.OwnDriverService.setData();
   }
 
   
@@ -78,7 +78,9 @@ export class OwnerDriverComponent implements OnInit {
   }
 
   submitForm(){
-    this.OwnDriverService.createDoc(this.editForm.value);
+    this.OwnDriverService.updateDoc(this.editForm.value);
   }
+
+  
 
 }

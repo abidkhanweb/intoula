@@ -45,7 +45,8 @@
                         <td>{{driver.vehicleNumber}}</td>
                         <td>{{driver.vehicleModel}}</td>
                         <td class="buttons">
-                            <button class="btn btn-primary" (click)="showModalDialog()">Edit</button>
+                            <button class="btn btn-primary" (click)="getDocId(driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,driver.address,
+                            driver.age,driver.joiningDate,driver.fuelType,driver.vehicleNumber,driver.vehicleModel);showModalDialog()">Edit</button>
                             <button class="btn btn-danger" (click)="deleteDriver(driver.docId)">Delete</button>
                         </td>
                     </tr>
@@ -73,7 +74,13 @@ driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,
                 <div class="form-group">
                     <div class="ui-inputgroup">
                         <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
-                        <input class="form-control" type="text" pInputText placeholder="First name" formControlName="docId" name="docId" required ngModel>         
+                        <input class="form-control" type="text" pInputText placeholder="Doc ID" formControlName="docId" name="docId" required ngModel>         
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="form-control" type="text" pInputText placeholder="Media" formControlName="media" name="media" required ngModel>         
                     </div>
                 </div>
                 <div class="form-group">

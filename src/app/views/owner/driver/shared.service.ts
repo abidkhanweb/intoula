@@ -136,6 +136,13 @@ export class OwnDriverService implements OnInit {
     })
   }
 
+  updateDoc(data){
+    console.log(data);
+    this.driverCollect.doc(data.docId).set(
+    data,
+    {merge: true});
+  }
+
 
   ngOnInit(){
   
