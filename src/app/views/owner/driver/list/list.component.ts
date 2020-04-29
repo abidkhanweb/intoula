@@ -21,18 +21,18 @@ export class OwnerDriverComponent implements OnInit {
     media:new FormControl(),
     firstName:new FormControl(),
     lastName:new FormControl(),
-    email:new FormControl(),
     contactNumber:new FormControl(),
+    email:new FormControl(),
     age:new FormControl(),
-    address:new FormControl(),
-    joiningDate:new FormControl(),
     fuelType:new FormControl(),
+    joiningDate:new FormControl(),
+    vehicleNumber:new FormControl(),
     vehicleModel:new FormControl(),
-    vehicleNumber:new FormControl()
+    address:new FormControl(),
   });
 
 
-  getDocId(id,media,firstName,lastName,contactNumber,email,address,age,fuelType,joiningDate,vehicleNumber,vehicleModel){
+  getDocId(id,media,firstName,lastName,contactNumber,email,age,fuelType,joiningDate,vehicleNumber,vehicleModel,address){
     this.editForm.setValue({
       docId: id,
       media: media,
@@ -40,13 +40,14 @@ export class OwnerDriverComponent implements OnInit {
       lastName:lastName,
       contactNumber:contactNumber,
       email: email,
-      address:address,
       age:age,
       fuelType:fuelType,
-      joiningDate:joiningDate, 
+      joiningDate:joiningDate = new Date(),
       vehicleNumber:vehicleNumber,
       vehicleModel:vehicleModel,
+      address:address,
     });
+
   }
 
 

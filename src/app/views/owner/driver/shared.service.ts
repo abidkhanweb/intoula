@@ -120,7 +120,7 @@ export class OwnDriverService implements OnInit {
     this.driverCollect.doc(id).delete();
   }
 
-  setData(){
+  /*setData(){
     this.driverCollect.doc("fmVyasduzSeunNElAsjORLt").set({
     media:'',
     firstName:'Gulam',
@@ -134,7 +134,7 @@ export class OwnDriverService implements OnInit {
     vehicleNumber:'MH 04 - 5263',
     vehicleModel:'Honda City - Ivtec'
     })
-  }
+  }*/
 
   updateDoc(data){
     console.log(data);

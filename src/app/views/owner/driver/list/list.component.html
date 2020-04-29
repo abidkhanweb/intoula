@@ -20,12 +20,12 @@
                     <th>Last Name</th>
                     <th>Contact Number</th>
                     <th>Email</th>
-                    <th>Address</th>
                     <th>Age</th>
                     <th>Fuel Type</th>
                     <th>Joining Date</th>
                     <th>Vehicle Number</th>
                     <th>Vehicle Model</th>
+                    <th>Address</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -38,16 +38,17 @@
                         <td>{{driver.lastName}}</td>
                         <td>{{driver.contactNumber}}</td>
                         <td>{{driver.email}}</td>
-                        <td>{{driver.address}}</td>
                         <td>{{driver.age}}</td>
                         <td>{{driver.fuelType}}</td>
                         <td>{{driver.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td>
                         <td>{{driver.vehicleNumber}}</td>
                         <td>{{driver.vehicleModel}}</td>
+                        <td>{{driver.address}}</td>
                         <td class="buttons">
-                            <button class="btn btn-primary" (click)="getDocId(driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,driver.address,
-                            driver.age,driver.joiningDate,driver.fuelType,driver.vehicleNumber,driver.vehicleModel);showModalDialog()">Edit</button>
-                            <button class="btn btn-danger" (click)="deleteDriver(driver.docId)">Delete</button>
+                            <button class="btn btn-primary" (click)="getDocId(driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,
+                            driver.age,driver.fuelType,driver.joiningDate,driver.vehicleNumber,driver.vehicleModel,driver.address);showModalDialog()"
+                            pButton icon="pi pi-pencil" type="button"></button>
+                            <button class="btn btn-danger ui-button-danger" pButton icon="pi pi-trash" type="button" (click)="deleteDriver(driver.docId)"></button>
                         </td>
                     </tr>
 
@@ -61,8 +62,8 @@
     </div>
     
 </div>
-driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,driver.address,
-          driver.age,driver.joiningDate,driver.fuelType,driver.vehicleNumber,driver.vehicleModel
+driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,
+                            driver.age,driver.fuelType,driver.joiningDate,driver.vehicleNumber,driver.vehicleModel,driver.address
 <h3>Modal</h3>
 <button type="button" (click)="showModalDialog()" pButton icon="pi pi-external-link" label="Show"></button>
 <p-dialog header="Godfather I" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
@@ -77,12 +78,16 @@ driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,
                         <input class="form-control" type="text" pInputText placeholder="Doc ID" formControlName="docId" name="docId" required ngModel>         
                     </div>
                 </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="form-group">
                     <div class="ui-inputgroup">
                         <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
                         <input class="form-control" type="text" pInputText placeholder="Media" formControlName="media" name="media" required ngModel>         
                     </div>
                 </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="form-group">
                     <div class="ui-inputgroup">
                         <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
@@ -90,6 +95,7 @@ driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,
                     </div>
                 </div>
             </div>
+            
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="form-group">
                     <div class="ui-inputgroup">
@@ -125,8 +131,16 @@ driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <div class="ui-inputgroup">
+                        <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                        <input class="form-control" type="text" pInputText placeholder="Fuel Type" formControlName="fuelType" name="fuelType" ngModel>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="form-group">
+                    <div class="ui-inputgroup">
                         <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
-                        <p-calendar [(ngModel)]="value" formControlName="joiningDate" name="joiningDate" placeholder="Date of joining"></p-calendar>
+                        <p-calendar [(ngModel)]="value" formControlName="joiningDate"  dateFormat="mm/dd/yy" name="joiningDate" placeholder="Date of joining"></p-calendar>
                     </div>
                 </div>
             </div>

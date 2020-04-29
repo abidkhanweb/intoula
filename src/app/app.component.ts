@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
       this.appointmentData = response;
     })
 
-    this.ds.setData();
+    //this.ds.setData();
   }
     /*visibleSidebar2 = true;
 

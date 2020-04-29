@@ -32,11 +32,11 @@ export class OwnerCreateDriverComponent implements OnInit {
     email:new FormControl(),
     contactNumber:new FormControl(),
     age:new FormControl(),
-    address:new FormControl(),
-    joiningDate:new FormControl(),
     fuelType:new FormControl(),
+    joiningDate:new FormControl(),
     vehicleModel:new FormControl(),
-    vehicleNumber:new FormControl()
+    vehicleNumber:new FormControl(),
+    address:new FormControl(),
   })
 
   

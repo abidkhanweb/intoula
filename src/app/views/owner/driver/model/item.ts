@@ -5,10 +5,10 @@ export interface Item {
     lastName?:string,
     contactNumber?:string,
     email?:string,
-    address?:string,
     age?:string,
     fuelType?:string,
-    joiningDate?:string,
+    joiningDate?:Date,
     vehicleNumber?:string,
-    vehicleModel?:string
+    vehicleModel?:string,
+    address?:string,
 }
