@@ -17,10 +17,6 @@ export class OwnerCreateDriverComponent implements OnInit {
   url:string;
   id:string;
   file:string;
-
-
-
-  
   value: Date;
 
   constructor(private OwnDriveService:OwnDriverService,@Inject(AngularFireStorage) private storage: AngularFireStorage, @Inject(OwnDriverService) private fileService: OwnDriverService) { }
@@ -29,15 +25,15 @@ export class OwnerCreateDriverComponent implements OnInit {
     media:new FormControl(),
     firstName:new FormControl(),
     lastName:new FormControl(),
-    email:new FormControl(),
     contactNumber:new FormControl(),
+    email:new FormControl(),
     age:new FormControl(),
     fuelType:new FormControl(),
     joiningDate:new FormControl(),
     vehicleModel:new FormControl(),
     vehicleNumber:new FormControl(),
     address:new FormControl(),
-  })
+  });
 
   
 

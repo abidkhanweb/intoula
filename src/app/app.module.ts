@@ -28,6 +28,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { CreateDriverComponent } from './create-driver/create-driver.component';
 import { environment } from '../environments/environment';
 
+/* Directive */
+import { TestDirective } from './directive/test.directive';
+
 
 
 /* Firebase configuration */
@@ -41,6 +44,7 @@ import { environment } from '../environments/environment';
     FooterComponent,
     HeaderComponent,
     SidebarComponent,
+    TestDirective,
     
   ],
   imports: [

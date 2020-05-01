@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { PrimecomponentsModule } from '../primecomponents.module';
+
 
 import { OwnerCreateDriverComponent } from './owner/driver/create/create.component';
 import { OwnerDriverComponent } from './owner/driver/list/list.component';
@@ -11,7 +13,11 @@ import { DriverViewComponent } from './driver/profile/profile.component';
 import { DriverCreateReportComponent } from './driver/report/create/create.component';
 import { DriverViewReportComponent } from './driver/report/view/view.component';
 
-import { PrimecomponentsModule } from '../primecomponents.module';
+
+
+
+
+
 
 
 
