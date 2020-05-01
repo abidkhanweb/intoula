@@ -21,9 +21,6 @@ const routes: Routes = [
   { path:'driver-view', component:DriverViewComponent},
   { path:'driver-create-report', component:DriverCreateReportComponent},
   { path:'driver-view-report', component:DriverViewReportComponent},
-
-
-  
 ];
 
 @NgModule({

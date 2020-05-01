@@ -1,13 +1,21 @@
-import { Directive } from '@angular/core';
-import { ElementRef } from '@angular/core';
+import { Directive,ElementRef, HostListener } from '@angular/core';
+import { Router,ActivatedRoute } from '@angular/router';
+
+
 
 @Directive({
   selector: '[appTest]'
 })
 export class TestDirective {
-
-  constructor(private el:ElementRef) {
+  
+  constructor(private el:ElementRef, private router:Router, private activatedRoute:ActivatedRoute) {
+    console.log(el.nativeElement);
     el.nativeElement.style.color="red";
+  }
+
+  @HostListener('click') onDelete(){
+    alert();
+    this.router.navigateByUrl('driver-dashboard');
   }
 
 }
