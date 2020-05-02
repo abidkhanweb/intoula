@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { DriverReportService } from '../shared.service';
 import { Item } from '../model/item';
 
@@ -10,27 +11,53 @@ import { Item } from '../model/item';
 export class DriverViewReportComponent implements OnInit {
 
   allReport:Item[];
+  
+  inTimePicker:Date;
+  outTimePicker:Date;
+
+  displayModal: boolean;
 
   constructor(private driverReportService:DriverReportService) { }
 
+  editForm:any = new FormGroup({
+    docId:new FormControl(),
+    firstName:new FormControl(),
+    lastName:new FormControl(),
+    inTime:new FormControl(),
+    outTime:new FormControl(),
+    expense:new FormControl(),
+    shift:new FormControl(),
+    rides:new FormControl(),
+    revenue:new FormControl(),
+  });
+
+  showModalDialog() {
+    this.displayModal = true;
+  }
+
   
-  
-  getDocId(id,media,firstName,lastName,contactNumber,email,age,fuelType,joiningDate,vehicleNumber,vehicleModel,address){
+  getDocId(id,firstName,lastName,inTime,outTime,expense,shift,rides,revenue){
     this.editForm.setValue({
       docId: id,
-      media: media,
       firstName:firstName,
       lastName:lastName,
-      contactNumber:contactNumber,
-      email: email,
-      age:age,
-      fuelType:fuelType,
-      joiningDate:joiningDate = new Date(),
-      vehicleNumber:vehicleNumber,
-      vehicleModel:vehicleModel,
-      address:address,
+      inTime:inTime,
+      outTime: outTime = new Date(),
+      expense:expense = new Date(),
+      shift:shift,
+      rides:rides,
+      revenue:revenue,
+      
     });
 
+  }
+
+  deleteReport(id){
+    this.driverReportService.deleteDoc(id);
+  }
+
+  submitForm(){
+    this.driverReportService.updateDoc(this.editForm.value);
   }
 
   ngOnInit(): void {

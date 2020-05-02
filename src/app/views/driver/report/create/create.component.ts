@@ -9,6 +9,9 @@ import { DriverReportService } from '../shared.service';
 })
 export class DriverCreateReportComponent implements OnInit {
 
+  inTimePicker:Date;
+  outTimePicker:Date;
+
   driverReportForm:any = new FormGroup({
     firstName:new FormControl(),
     lastName:new FormControl(),
