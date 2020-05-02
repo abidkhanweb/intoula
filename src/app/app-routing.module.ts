@@ -11,6 +11,7 @@ import { DriverViewComponent } from './views/driver/profile/profile.component';
 import { DriverCreateReportComponent } from './views/driver/report/create/create.component';
 import { DriverViewReportComponent } from './views/driver/report/view/view.component';
 
+
 const routes: Routes = [
   { path:'', component:OwnerDashboardComponent, pathMatch:'full'},
   { path:'create-driver', component:OwnerCreateDriverComponent},

@@ -1,10 +1,19 @@
 <div class="page-header">
     <div class="row">
         <div class="col col-md-12 col-lg-12">
-            <h1 appTest>Dashboard</h1>
+            <h1>Dashboard</h1>
         </div>
     </div>
 </div>
+
+<p-sidebar [(visible)]="notificationPanel" position="top" [baseZIndex]="10000" *ngIf="notificationPanel">
+    <h1 style="font-weight:normal">Top Sidebar</h1>
+    <button pButton type="button" (click)="notificationPanel = false" label="Save" class="ui-button-success"></button>
+    <button pButton type="button" (click)="notificationPanel = false" label="Cancel" class="ui-button-secondary"></button>
+</p-sidebar>
+<button type="text" (click)="notificationPanel = true" pButton icon="pi pi-plus" label="Show"></button>
+
+<button class="btn btn-success lg large" (click)="onClickNot(0)">Show</button>
 
 <div class="main-content">
     <div class="row">

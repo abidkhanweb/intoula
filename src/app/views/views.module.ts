@@ -21,7 +21,9 @@ import { DriverViewReportComponent } from './driver/report/view/view.component';
 
 
 
-const allComponents = [OwnerCreateDriverComponent, OwnerDriverComponent,OwnerDashboardComponent,OwnerDriverViewComponent,DriverDashboardComponent,DriverViewComponent,DriverCreateReportComponent,DriverViewReportComponent]
+
+
+const allComponents = [OwnerCreateDriverComponent, OwnerDriverComponent,OwnerDashboardComponent,OwnerDriverViewComponent,DriverDashboardComponent,DriverViewComponent,DriverCreateReportComponent,DriverViewReportComponent];
 
 @NgModule({
   declarations: [allComponents],
@@ -31,6 +33,6 @@ const allComponents = [OwnerCreateDriverComponent, OwnerDriverComponent,OwnerDas
     FormsModule,
     ReactiveFormsModule
   ],
-  exports:allComponents
+  exports:[allComponents]
 })
 export class ViewsModule { }
