@@ -1,1 +1,90 @@
-<p>create works!</p>
+<div class="page-header">
+    <div class="row">
+        <div class="col col-md-12 col-lg-12">
+            <h1>Create Report</h1>
+        </div>
+    </div>
+</div>
+<div class="main-content">
+    <div class="row justify-content-center">
+        <div class="col-6 col-md-6">
+            
+            <form [formGroup]="driverReportForm" novalidate (ngSubmit)="submitForm()">
+
+                <div class="row">
+                    
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input class="form-control" type="text" pInputText placeholder="First name" formControlName="firstName" name="firstName" ngModel>         
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input class="form-control" type="text" pInputText placeholder="Last name" formControlName="lastName" name="lastName" ngModel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                                <p-calendar [(ngModel)]="inTimePicker" formControlName="inTime" name="inTime" placeholder="In time"></p-calendar>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                                <p-calendar [(ngModel)]="outTimePicker" formControlName="outTime" name="outTime" placeholder="Out time"></p-calendar>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input class="form-control" type="text" pInputText placeholder="Expense" formControlName="expense" name="expense" ngModel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input class="form-control" type="text" pInputText placeholder="Shift" formControlName="shift" name="shift" ngModel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input class="form-control" type="text" pInputText placeholder="Rides" formControlName="rides" name="rides" ngModel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <div class="ui-inputgroup">
+                                <span class="ui-inputgroup-addon"><i class="pi pi-user"></i></span>
+                                <input class="form-control" type="text" pInputText placeholder="Revenue" formControlName="revenue" name="revenue" ngModel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12">
+                        <div class="form-group text-right">
+                            <button pButton type="button" label="Submit" (click)="submitForm()" [disabled]="!driverReportForm.valid"></button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

@@ -103,7 +103,7 @@ export class OwnDriverService implements OnInit {
   createDoc(data){
     this.driverCollect.add({
       media:data.media,
-      firstName:data.lastName,
+      firstName:data.firstName,
       lastName:data.lastName,
       contactNumber:data.contactNumber,
       email:data.email,

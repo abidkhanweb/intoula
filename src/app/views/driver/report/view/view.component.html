@@ -1,1 +1,46 @@
-<p>view works!</p>
+<div class="main-content">
+    
+    <div class="row">
+        <div class="col col-md-12">
+            <table class="table">
+                <thead>
+                  <tr>
+                   
+                    <th>Doc ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>In time</th>
+                    <th>Out time</th>
+                    <th>Expense</th>
+                    <th>Shift</th>
+                    <th>Rides</th>
+                    <th>Revenue</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr *ngFor="let report of allReport">
+                        <td>{{report.docId}}</td>
+                        <td>{{report.firstName}}</td>
+                        <td>{{report.lastName}}</td>
+                        <td>{{report.inTime.seconds * 1000 | date:'MM-dd-yyyy'}}</td>
+                        <td>{{report.outTime.seconds * 1000 | date:'MM-dd-yyyy'}}</td>
+                        <td>{{report.expense}}</td>
+                        <td>{{report.shift}}</td>
+                        <!-- <td>{{report.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td> -->
+                        <td>{{report.rides}}</td>
+                        <td>{{report.revenue}}</td>
+                        <td class="buttons">
+                            <button class="btn btn-primary" (click)="getDocId(report.docId,report.firstName,report.lastName,report.inTime,report.outTime,
+                            report.expense,report.shift,report.rides,report.revenue); showModalDialog()"
+                            pButton icon="pi pi-pencil" type="button"></button>
+                            <button class="btn btn-danger ui-button-danger" pButton icon="pi pi-trash" type="button" (click)="deleteReport(report.docId)"></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+</div>
