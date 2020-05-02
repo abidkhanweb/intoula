@@ -25,7 +25,6 @@ import { ViewComponent } from './views/view.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { CreateDriverComponent } from './create-driver/create-driver.component';
 import { environment } from '../environments/environment';
 
 /* Directive */
@@ -39,7 +38,6 @@ import { TestDirective } from './directive/test.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    CreateDriverComponent,
     ViewComponent,
     FooterComponent,
     HeaderComponent,

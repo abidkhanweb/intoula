@@ -33,7 +33,7 @@
                         <div class="form-group">
                             <div class="ui-inputgroup">
                                 <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
-                                <p-calendar [(ngModel)]="inTimePicker" formControlName="inTime" name="inTime" placeholder="In time"></p-calendar>
+                                <p-calendar [(ngModel)]="inTimePicker" showTime="showTime" hourFormat="24" formControlName="inTime" name="inTime" placeholder="In time"></p-calendar>
                             </div>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                         <div class="form-group">
                             <div class="ui-inputgroup">
                                 <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
-                                <p-calendar [(ngModel)]="outTimePicker" formControlName="outTime" name="outTime" placeholder="Out time"></p-calendar>
+                                <p-calendar [(ngModel)]="outTimePicker" showTime="showTime" hourFormat="24" formControlName="outTime" name="outTime" placeholder="Out time"></p-calendar>
                             </div>
                         </div>
                     </div>

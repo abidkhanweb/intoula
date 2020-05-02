@@ -23,26 +23,32 @@ export class DriverViewReportComponent implements OnInit {
     docId:new FormControl(),
     firstName:new FormControl(),
     lastName:new FormControl(),
-    inTime:new FormControl(),
-    outTime:new FormControl(),
+    /*inTime:new FormControl(),
+    outTime:new FormControl(),*/
     expense:new FormControl(),
     shift:new FormControl(),
     rides:new FormControl(),
     revenue:new FormControl(),
   });
 
+  ngOnInit(): void {
+    this.driverReportService.getAllReport().subscribe(res=>{
+      this.allReport = res;
+    })
+  }
+
   showModalDialog() {
     this.displayModal = true;
   }
 
-  
-  getDocId(id,firstName,lastName,inTime,outTime,expense,shift,rides,revenue){
+  //inTime,outTime,
+  getDocId(id,firstName,lastName,expense,shift,rides,revenue){
     this.editForm.setValue({
       docId: id,
       firstName:firstName,
       lastName:lastName,
-      inTime:inTime,
-      outTime: outTime = new Date(),
+      /*inTime:inTime,
+      outTime: outTime = new Date(),*/
       expense:expense = new Date(),
       shift:shift,
       rides:rides,
@@ -60,10 +66,6 @@ export class DriverViewReportComponent implements OnInit {
     this.driverReportService.updateDoc(this.editForm.value);
   }
 
-  ngOnInit(): void {
-    this.driverReportService.getAllReport().subscribe(res=>{
-      this.allReport = res;
-    })
-  }
+  
 
 }

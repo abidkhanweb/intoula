@@ -32,7 +32,7 @@
                         <td>{{report.rides}}</td>
                         <td>{{report.revenue}}</td>
                         <td class="buttons">
-                            <button class="btn btn-primary" (click)="getDocId(report.docId,report.firstName,report.lastName,report.inTime,report.outTime,
+                            <button class="btn btn-primary" (click)="getDocId(report.docId,report.firstName,report.lastName,
                             report.expense,report.shift,report.rides,report.revenue); showModalDialog()"
                             pButton icon="pi pi-pencil" type="button"></button>
                             <button class="btn btn-danger ui-button-danger" pButton icon="pi pi-trash" type="button" (click)="deleteReport(report.docId)"></button>
@@ -45,6 +45,7 @@
     
 </div>
 
+report.inTime,report.outTime,
 <p-dialog header="Godfather I" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
     [draggable]="false" [resizable]="false">
     <form [formGroup]="editForm" novalidate (ngSubmit)="submitForm()">
@@ -67,7 +68,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6">
+            <!-- <div class="col-12 col-md-6">
                 <div class="form-group">
                     <div class="ui-inputgroup">
                         <span class="ui-inputgroup-addon"><i class="pi pi-calendar"></i></span>
@@ -82,7 +83,7 @@
                         <p-calendar [(ngModel)]="outTimePicker" formControlName="outTime" name="outTime" placeholder="Out time"></p-calendar>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col-12 col-md-6">
                 <div class="form-group">
                     <div class="ui-inputgroup">
