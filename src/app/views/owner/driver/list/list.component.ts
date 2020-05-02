@@ -3,8 +3,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { OwnDriverService } from '../shared.service';
 import { Item } from '../model/item';
 
-
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',

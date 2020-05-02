@@ -8,7 +8,6 @@
 </div>
 
 <div class="main-content">
-    
     <div class="row">
         <div class="col col-md-12">
             <table class="table">
@@ -30,7 +29,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  
                     <tr *ngFor="let driver of allDrivers">
                         <td>{{driver.docId}}</td>
                         <td><img [src]="driver.media" width="60"></td>
@@ -51,25 +49,18 @@
                             <button class="btn btn-danger ui-button-danger" pButton icon="pi pi-trash" type="button" (click)="deleteDriver(driver.docId)"></button>
                         </td>
                     </tr>
-
-
-                    
-                  
-
                 </tbody>
             </table>
         </div>
     </div>
     
 </div>
-driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,
-                            driver.age,driver.fuelType,driver.joiningDate,driver.vehicleNumber,driver.vehicleModel,driver.address
+<!-- driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,
+driver.age,driver.fuelType,driver.joiningDate,driver.vehicleNumber,driver.vehicleModel,driver.address
 <h3>Modal</h3>
-<button type="button" (click)="showModalDialog()" pButton icon="pi pi-external-link" label="Show"></button>
-<p-dialog header="Godfather I" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
-    [draggable]="false" [resizable]="false">
+<button type="button" (click)="showModalDialog()" pButton icon="pi pi-external-link" label="Show"></button> -->
+<p-dialog header="Edit Driver" [(visible)]="displayModal" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000" [draggable]="false" [resizable]="false">
     <form [formGroup]="editForm" novalidate (ngSubmit)="submitForm()">
-
         <div class="row">
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="form-group">
