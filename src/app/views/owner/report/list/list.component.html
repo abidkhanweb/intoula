@@ -1,4 +1,4 @@
-<!-- <div class="main-content">
+<div class="main-content">
     
     <div class="row">
         <div class="col col-md-12">
@@ -21,7 +21,6 @@
                   </tr>
                 </thead>
                 <tbody>
-                  
                     <tr *ngFor="let driver of allDrivers">
                         <td>{{driver.docId}}</td>
                         <td><img [src]="driver.media" width="60"></td>
@@ -31,20 +30,60 @@
                         <td>{{driver.email}}</td>
                         <td>{{driver.age}}</td>
                         <td>{{driver.fuelType}}</td>
-                        <td>{{driver.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td>
+                        <!-- <td>{{driver.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td> -->
                         <td>{{driver.vehicleNumber}}</td>
                         <td>{{driver.vehicleModel}}</td>
                         <td>{{driver.address}}</td>
-                        <td class="buttons">
+                        <!-- <td class="buttons">
                             <button class="btn btn-primary" (click)="getDocId(driver.docId,driver.media,driver.firstName,driver.lastName,driver.contactNumber,driver.email,
                             driver.age,driver.fuelType,driver.joiningDate,driver.vehicleNumber,driver.vehicleModel,driver.address);showModalDialog()"
                             pButton icon="pi pi-pencil" type="button"></button>
                             <button class="btn btn-danger ui-button-danger" pButton icon="pi pi-trash" type="button" (click)="deleteDriver(driver.docId)"></button>
+                        </td> -->
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+            <table class="table">
+                <thead>
+                  <tr>
+                   
+                    <th>Doc ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>In time</th>
+                    <th>Out time</th>
+                    <th>Expense</th>
+                    <th>Shift</th>
+                    <th>Rides</th>
+                    <th>Revenue</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                    <tr *ngFor="let report of allReport">
+                        <td>{{report.docId}}</td>
+                        <td>{{report.firstName}}</td>
+                        <td>{{report.lastName}}</td>
+                        <td>{{report.inTime.seconds * 1000 | date:'MM-dd-yyyy'}}</td>
+                        <td>{{report.outTime.seconds * 1000 | date:'MM-dd-yyyy'}}</td>
+                        <td>{{report.expense}}</td>
+                        <td>{{report.shift}}</td>
+                        <!-- <td>{{report.joiningDate.seconds * 1000 | date:'MM-dd-yyyy' }}</td> -->
+                        <td>{{report.rides}}</td>
+                        <td>{{report.revenue}}</td>
+                        <td class="buttons">
+                            <!-- <button class="btn btn-primary" (click)="getDocId(report.docId,report.firstName,report.lastName,
+                            report.expense,report.shift,report.rides,report.revenue);"
+                            pButton icon="pi pi-pencil" type="button"></button>
+                            <button class="btn btn-danger ui-button-danger" pButton icon="pi pi-trash" type="button" (click)="deleteReport(report.docId)"></button> -->
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    
-</div> -->
+</div>

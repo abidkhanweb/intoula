@@ -1,11 +1,10 @@
-import { Time } from '@angular/common';
 
 export interface Item {
     docId?:string,
     firstName?:string,
     lastName?:string,
-    inTime?:Time,
-    outTime?:Time,
+    inTime?:Date,
+    outTime?:Date,
     expense?:string,
     shift?:string,
     rides?:string,

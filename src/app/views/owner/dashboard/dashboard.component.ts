@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OwnerDashboardComponent implements OnInit {
 
-  notificationPanel:Boolean=false;
+  notificationPanel;
   constructor() { }
 
-  counter:any;
+  /*counter:any;
   onClickNot(counter){
     
     if(counter==0){
@@ -28,18 +28,26 @@ export class OwnerDashboardComponent implements OnInit {
 
   hideNotipanel(){
     setTimeout(function(){
-      
       this.notificationPanel = true;
-      alert(this.notificationPanel);
+      //alert(this.notificationPanel);
     },10000);
   }
 
 
-  
+  Counter:number=0;
+
+  CounterInc(){
+    setInterval(function(){
+      //alert(this.notificationPanel);  
+      this.Counter + 1;
+    },1000);
+  }
+  */
 
   ngOnInit() {
+    /*this.CounterInc();
     this.hideNotipanel();
-    this.onClickNot(this.counter);
+    this.onClickNot(this.counter);*/
     console.log(this.notificationPanel);
   }
 

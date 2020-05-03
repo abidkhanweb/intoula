@@ -17,7 +17,10 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 /* Service */
 import { OwnDriverService } from './views/owner/driver/shared.service';
-import { DataService } from './data.service';
+import { DriverReportService } from './views/driver/report/shared.service';
+
+
+
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -29,6 +32,7 @@ import { environment } from '../environments/environment';
 
 /* Directive */
 import { TestDirective } from './directive/test.directive';
+
 
 
 
@@ -61,7 +65,7 @@ import { TestDirective } from './directive/test.directive';
     AngularFireStorageModule, // storage
     
   ],
-  providers: [OwnDriverService,DataService],
+  providers: [OwnDriverService,DriverReportService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

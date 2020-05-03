@@ -8,6 +8,7 @@ import { OwnerCreateDriverComponent } from './owner/driver/create/create.compone
 import { OwnerDriverComponent } from './owner/driver/list/list.component';
 import { OwnerDashboardComponent } from './owner/dashboard/dashboard.component';
 import { OwnerDriverViewComponent } from './owner/driver/view/view.component';
+import { OwnerReportComponent } from './owner/report/list/list.component';
 import { DriverDashboardComponent } from './driver/dashboard/dashboard.component';
 import { DriverViewComponent } from './driver/profile/profile.component';
 import { DriverCreateReportComponent } from './driver/report/create/create.component';
@@ -23,7 +24,7 @@ import { DriverViewReportComponent } from './driver/report/view/view.component';
 
 
 
-const allComponents = [OwnerCreateDriverComponent, OwnerDriverComponent,OwnerDashboardComponent,OwnerDriverViewComponent,DriverDashboardComponent,DriverViewComponent,DriverCreateReportComponent,DriverViewReportComponent];
+const allComponents = [OwnerCreateDriverComponent, OwnerDriverComponent,OwnerDashboardComponent,OwnerDriverViewComponent,DriverDashboardComponent,DriverViewComponent,DriverCreateReportComponent,DriverViewReportComponent,OwnerReportComponent];
 
 @NgModule({
   declarations: [allComponents],

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 import { Observable, from } from 'rxjs';
@@ -18,7 +17,7 @@ export class AppComponent implements OnInit {
   /*visibleSidebar1 = true;
   items: MenuItem[];*/
   appointmentData:Item[];
-  constructor(private dataService:DataService, private http:HttpClient, private ds:OwnDriverService){
+  constructor(private http:HttpClient){
       /*const things = db.collection('owner').doc('Drivers').collection('Driver').valueChanges();
       things.subscribe(a=> {
         console.log(this.data = a)
@@ -31,9 +30,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){
     
-    this.dataService.getAllData().subscribe((response:any)=>{
-      this.appointmentData = response;
-    })
+    // this.dataService.getAllData().subscribe((response:any)=>{
+    //   this.appointmentData = response;
+    // })
 
     //this.ds.setData();
   }
