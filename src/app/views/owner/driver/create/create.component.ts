@@ -12,6 +12,7 @@ import { finalize } from "rxjs/operators";
 })
 export class OwnerCreateDriverComponent implements OnInit {
 
+  notificationPanel;
 
   selectedImage: any = null;
   url:string;

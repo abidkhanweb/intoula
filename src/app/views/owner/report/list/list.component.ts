@@ -12,15 +12,11 @@ export class OwnerReportComponent implements OnInit {
   allReport:Item[];
   driverReportCollect:any;
 
-  constructor(private driverReportService:DriverReportService){
-}
+  constructor(private driverReportService:DriverReportService){}
 
   ngOnInit(): void {
     this.driverReportService.getAllReport().subscribe(res=>{
       this.allReport = res;
     });
-
-   
   }
-
 }

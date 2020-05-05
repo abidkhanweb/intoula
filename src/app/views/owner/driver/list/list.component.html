@@ -12,7 +12,6 @@
             <table class="table">
                 <thead>
                   <tr>
-                    <th>Doc ID</th>
                     <th>Media</th>
                     <th>First Name</th>
                     <th>Last Name</th>
@@ -29,7 +28,6 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let driver of allDrivers">
-                        <td>{{driver.docId}}</td>
                         <td><img [src]="driver.media" width="60"></td>
                         <td>{{driver.firstName}}</td>
                         <td>{{driver.lastName}}</td>
